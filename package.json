@@ -4,7 +4,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bugdeployer/codeglass.git"
+    "url": "git+https://github.com/bugdeployer/codeglass.git"
   },
   "description": "See through your codebase: a live map of capabilities, flows and database for Claude Code and Codex.",
   "keywords": [
@@ -18,6 +18,10 @@
     "cli"
   ],
   "homepage": "https://github.com/bugdeployer/codeglass",
+  "bugs": {
+    "url": "https://github.com/bugdeployer/codeglass/issues"
+  },
+  "author": "bugdeployer",
   "type": "module",
   "bin": {
     "codeglass": "bin/codeglass.js"

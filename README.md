@@ -4,6 +4,8 @@ I got tired of staring at a terminal while a coding agent worked, waiting for it
 
 It's a personal tool and a bit of a toy. It works for me on my projects. It might work for yours.
 
+[npm](https://www.npmjs.com/package/codeglass) · [GitHub](https://github.com/bugdeployer/codeglass) · [Issues](https://github.com/bugdeployer/codeglass/issues)
+
 ## What it shows
 
 - **System map**: the project's features (Auth, Notes, Billing…) as cards, with lines for how they depend on each other. Open a card to see its flows step by step, including the branches, and which tables each step reads or writes.
@@ -15,7 +17,19 @@ With **LIVE** on, new files, routes and tables show up as the agent writes them.
 
 ## Running it
 
-It isn't on npm. Clone it and run it from the folder:
+```bash
+npx codeglass
+```
+
+That opens http://localhost:4777. Click **Open project folder** and pick a project. You can also pass a folder: `npx codeglass path/to/project`.
+
+If you'll use it often, install it once and run `codeglass` from anywhere:
+
+```bash
+npm install -g codeglass
+```
+
+Or run it from source:
 
 ```bash
 git clone https://github.com/bugdeployer/codeglass.git
@@ -24,8 +38,6 @@ npm install
 npm run build
 npm start
 ```
-
-That opens http://localhost:4777. Click **Open project folder** and pick a project. You can also pass a folder: `npm start -- path/to/project`.
 
 You need Node 20.11+. The file scan, schema, topography and stats work on their own. The nicer map (feature names, descriptions, flows) comes from running the [Claude Code](https://code.claude.com) or Codex CLI, so you need one of them installed and signed in. Pick which in **Settings**.
 
